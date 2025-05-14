@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="WDD 231 Course Home Page - Evance Hosea Katanga">
+  <meta name="author" content="Evance Hosea Katanga">
+  <title>WDD 231 | Evance Katanga</title>
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/large.css" media="(min-width: 768px)">
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/dates.js" defer></script>
+  <script src="scripts/courses.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@500&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <img src="images/evance-profile.jpg" alt="Evance Katanga" width="100" height="100">
+    <span>Evance Hosea Katanga</span>
+  </header>
+
+  <nav>
+    <button id="menu" aria-label="Navigation menu">☰</button>
+    <ul class="navigation">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="chamber/">Chamber</a></li>
+      <li><a href="final/">Final</a></li>
+      <li><a href="https://github.com/evancekatanga" target="_blank">GitHub</a></li>
+      <li><a href="https://linkedin.com/in/evancekatanga" target="_blank">LinkedIn</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Home</h1>
+
+    <section class="card">
+      <h2>About Me</h2>
+      <p>Web Development student from Tanzania. Currently pursuing a degree in Software Development at BYU-Idaho with a
+        focus on frontend technologies.</p>
+    </section>
+
+    <section class="card">
+      <h2>Course Progress</h2>
+      <div class="filter-buttons">
+        <button data-filter="all">All Courses</button>
+        <button data-filter="WDD">WDD Courses</button>
+        <button data-filter="CSE">CSE Courses</button>
+      </div>
+      <div id="course-container" class="grid"></div>
+      <p class="credit-summary">Total Credits: <span id="credit-total">0</span></p>
+    </section>
+
+    <section class="card">
+      <h2>Contact</h2>
+      <address>
+        Dar es Salaam, Tanzania<br>
+        Email: <a href="mailto:ekatanga@byupthway.edu">ekatanga@byupthway.edu</a>
+      </address>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentYear"></span> Evance Katanga | Tanzania</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+
+</html>

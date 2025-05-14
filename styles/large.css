@@ -1,0 +1,39 @@
+@media (min-width: 768px) {
+  body {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  #menu {
+    display: none;
+  }
+
+  .navigation {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--primary-color);
+  }
+
+  .navigation a {
+    color: white;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+@media (min-width: 768px) {
+
+  /* Desktop navigation hover */
+  .navigation a:hover {
+    background-color: var(--secondary-color);
+    transform: none;
+    border-radius: 4px;
+  }
+
+  /* Desktop course card hover */
+  .course-card:hover {
+    transform: scale(1.02);
+  }
+}
