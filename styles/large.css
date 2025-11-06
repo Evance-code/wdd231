@@ -1,0 +1,138 @@
+@media (min-width: 768px) {
+    #hamburger {
+        display: none;
+    }
+
+    nav {
+        display: block !important;
+        position: static;
+        background: transparent;
+        box-shadow: none;
+    }
+
+    nav ul {
+        display: flex;
+        gap: 1.5rem;
+        justify-content: flex-end;
+        align-items: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav li {
+        border-bottom: none;
+    }
+
+    nav a {
+        color: var(--light);
+        text-decoration: none;
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        transition: var(--transition);
+        position: relative;
+    }
+
+    /* Hover effects for menu items */
+    nav a:hover {
+        background: var(--accent);
+        color: white;
+        transform: translateY(-2px);
+    }
+
+    /* Wayfinding - active page indicator */
+    nav a.active {
+        background: var(--accent);
+        color: white;
+    }
+
+    /* Main layout grid - matches wireframe exactly */
+    main {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: auto 1fr;
+        gap: 2rem;
+        padding: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        grid-column: 1 / -1;
+        text-align: left;
+        margin-bottom: 0;
+        border-bottom: 3px solid var(--dark);
+        padding-bottom: 0.5rem;
+    }
+
+    #about {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        background: var(--gray);
+        padding: 2rem;
+        border-radius: 0.75rem;
+        box-shadow: var(--shadow);
+        margin-bottom: 0;
+    }
+
+    #photo {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    #photo img {
+        width: 100%;
+        height: auto;
+        border-radius: 0.5rem;
+        object-fit: cover;
+    }
+
+    #courses {
+        grid-column: 1 / -1;
+        grid-row: 3 / 4;
+        background: var(--gray);
+        padding: 2rem;
+        border-radius: 0.75rem;
+        box-shadow: var(--shadow);
+        margin-top: 1rem;
+    }
+
+    /* Course grid for desktop */
+    .courses-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    /* Footer layout for desktop */
+    footer {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 2rem;
+    }
+
+    .social {
+        order: -1;
+    }
+}
+
+/* Large desktop screens */
+@media (min-width: 1024px) {
+    nav ul {
+        gap: 2rem;
+    }
+
+    main {
+        gap: 3rem;
+        padding: 3rem 2rem;
+    }
+
+    .courses-grid {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
+}
