@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Tanzania Global Business Chamber - Directory of member businesses and organizations">
+    <meta name="author" content="Your Name">
+
+    <meta property="og:title" content="Tanzania Global Business Chamber - Member Directory">
+    <meta property="og:description"
+        content="Discover leading businesses and organizations in Tanzania through our comprehensive member directory">
+    <meta property="og:image" content="https://your-username.github.io/wdd231/chamber/images/tgbc-directory.jpg">
+    <meta property="og:url" content="https://your-username.github.io/wdd231/chamber/directory.html">
+
+    <title>Member Directory - Tanzania Global Business Chamber</title>
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/directory.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="images/logo.png" alt="Tanzania Global Business Chamber Logo">
+                <h1>Tanzania Global Business Chamber</h1>
+            </div>
+            <nav>
+                <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="directory.html" class="active">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="directory-intro">
+            <h2>Member Directory</h2>
+            <p>Discover our network of leading businesses and organizations driving Tanzania's economic growth.</p>
+        </section>
+
+        <div class="view-controls">
+            <button id="gridView" class="view-btn active" aria-label="Grid view">Grid</button>
+            <button id="listView" class="view-btn" aria-label="List view">List</button>
+        </div>
+
+        <div id="memberDisplay" class="members-grid">
+            <!-- Member cards will be dynamically inserted here -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Tanzania Global Business Chamber</h3>
+                <p>Dar es Salaam, Tanzania</p>
+                <p>Email: info@tgbc.org</p>
+                <p>Phone: +255-22-123-4567</p>
+            </div>
+            <div class="development-info">
+                <p>&copy; <span id="currentYear"></span> Tanzania Global Business Chamber</p>
+                <p>Your Name | WDD 231</p>
+                <p>Last Modified: <span id="lastModified"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/directory.js"></script>
+</body>
+
+</html>

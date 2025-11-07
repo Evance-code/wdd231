@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join Tanzania Global Business Chamber - Membership benefits and application">
+    <meta name="author" content="Your Name">
+
+    <meta property="og:title" content="Join Tanzania Global Business Chamber">
+    <meta property="og:description" content="Discover membership benefits and join our network of Tanzanian businesses">
+    <meta property="og:image" content="https://your-username.github.io/wdd231/chamber/images/tgbc-join.jpg">
+    <meta property="og:url" content="https://your-username.github.io/wdd231/chamber/join.html">
+
+    <title>Join Us - Tanzania Global Business Chamber</title>
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/join.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="images/logo.png" alt="Tanzania Global Business Chamber Logo">
+                <h1>Tanzania Global Business Chamber</h1>
+            </div>
+            <nav>
+                <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html" class="active">Join</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="join-hero">
+            <h1>Join Our Business Community</h1>
+            <p>Connect, grow, and succeed with Tanzania's leading business network</p>
+        </section>
+
+        <div class="join-content">
+            <!-- Membership Benefits -->
+            <section class="benefits-section">
+                <h2>Membership Benefits</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <h3>Networking Opportunities</h3>
+                        <p>Connect with 500+ businesses across Tanzania and beyond</p>
+                    </div>
+                    <div class="benefit-card">
+                        <h3>Business Promotion</h3>
+                        <p>Get featured in our directory and marketing materials</p>
+                    </div>
+                    <div class="benefit-card">
+                        <h3>Training & Development</h3>
+                        <p>Access exclusive workshops and business training sessions</p>
+                    </div>
+                    <div class="benefit-card">
+                        <h3>Advocacy & Representation</h3>
+                        <p>Your voice heard in policy discussions and business forums</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Membership Levels -->
+            <section class="membership-levels">
+                <h2>Choose Your Membership Level</h2>
+                <div class="levels-grid">
+                    <div class="level-card">
+                        <h3>Non-Profit Member</h3>
+                        <div class="price">Free</div>
+                        <ul class="features">
+                            <li>Basic directory listing</li>
+                            <li>Monthly newsletter</li>
+                            <li>Access to public events</li>
+                            <li>Community networking</li>
+                        </ul>
+                        <button class="select-btn" data-level="non-profit">Select Plan</button>
+                    </div>
+                    <div class="level-card featured">
+                        <div class="popular-badge">Most Popular</div>
+                        <h3>Silver Member</h3>
+                        <div class="price">$250/year</div>
+                        <ul class="features">
+                            <li>Enhanced directory listing</li>
+                            <li>Business training sessions</li>
+                            <li>Social media promotion</li>
+                            <li>Event sponsorships</li>
+                            <li>Quarterly publications</li>
+                        </ul>
+                        <button class="select-btn" data-level="silver">Select Plan</button>
+                    </div>
+                    <div class="level-card">
+                        <h3>Gold Member</h3>
+                        <div class="price">$500/year</div>
+                        <ul class="features">
+                            <li>Premium directory placement</li>
+                            <li>All training programs</li>
+                            <li>Dedicated social media campaigns</li>
+                            <li>Priority event sponsorships</li>
+                            <li>Luncheon speaking opportunities</li>
+                            <li>Featured advertising</li>
+                        </ul>
+                        <button class="select-btn" data-level="gold">Select Plan</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Application Form -->
+            <section class="application-section">
+                <h2>Membership Application</h2>
+                <form id="membershipForm" class="application-form">
+                    <div class="form-group">
+                        <label for="firstName">First Name *</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastName">Last Name *</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="businessName">Business/Organization Name *</label>
+                        <input type="text" id="businessName" name="businessName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="businessAddress">Business Address</label>
+                        <textarea id="businessAddress" name="businessAddress" rows="3"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="businessDescription">Business Description</label>
+                        <textarea id="businessDescription" name="businessDescription" rows="4"
+                            placeholder="Briefly describe your business or organization..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="membershipLevel">Membership Level *</label>
+                        <select id="membershipLevel" name="membershipLevel" required>
+                            <option value="">Select a level</option>
+                            <option value="non-profit">Non-Profit Member (Free)</option>
+                            <option value="silver">Silver Member ($250/year)</option>
+                            <option value="gold">Gold Member ($500/year)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group timestamp">
+                        <label for="timestamp">Application Date</label>
+                        <input type="text" id="timestamp" name="timestamp" readonly>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Submit Application</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Tanzania Global Business Chamber</h3>
+                <p>Dar es Salaam, Tanzania</p>
+                <p>Email: info@tgbc.org</p>
+                <p>Phone: +255-22-123-4567</p>
+            </div>
+            <div class="development-info">
+                <p>&copy; <span id="currentYear"></span> Tanzania Global Business Chamber</p>
+                <p>Your Name | WDD 231</p>
+                <p>Last Modified: <span id="lastModified"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/join.js"></script>
+</body>
+
+</html>
