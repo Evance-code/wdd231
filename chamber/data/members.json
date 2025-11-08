@@ -2,83 +2,75 @@
     "members": [
         {
             "name": "Tanzania Breweries Limited",
-            "address": "Plot 1, Mbezi Beach, Dar es Salaam",
-            "phone": "+255-22-277-2000",
+            "address": "Plot 1, Ubungo, Dar es Salaam",
+            "phone": "+255-22-277-4000",
             "website": "https://www.tanzaniabreweries.com",
-            "image": "tbl.png",
-            "membership": 3,
-            "industry": "Beverages",
-            "description": "Leading beverage company in Tanzania"
-        },
-        {
-            "name": "CRDB Bank Plc",
-            "address": "Ali Hassan Mwinyi Road, Dar es Salaam",
-            "phone": "+255-22-211-7442",
-            "website": "https://www.crdbbank.com",
-            "image": "crdb.png",
-            "membership": 3,
-            "industry": "Banking & Finance",
-            "description": "Largest commercial bank in Tanzania"
+            "image": "tbl-logo.jpg",
+            "membershipLevel": 3,
+            "industry": "Manufacturing"
         },
         {
             "name": "Vodacom Tanzania",
-            "address": "Sam Nujoma Road, Dar es Salaam",
+            "address": "Plot 72, Ali Hassan Mwinyi Road, Dar es Salaam",
             "phone": "+255-22-222-0000",
             "website": "https://www.vodacom.co.tz",
-            "image": "vodacom.png",
-            "membership": 3,
-            "industry": "Telecommunications",
-            "description": "Leading mobile network operator"
+            "image": "vodacom-logo.jpg",
+            "membershipLevel": 3,
+            "industry": "Telecommunications"
         },
         {
-            "name": "Tanga Cement Plc",
-            "address": "Tanga Industrial Area, Tanga",
-            "phone": "+255-27-264-4395",
-            "website": "https://www.tangacement.com",
-            "image": "tangacement.png",
-            "membership": 2,
-            "industry": "Manufacturing",
-            "description": "Premium cement manufacturer"
-        },
-        {
-            "name": "Serengeti Breweries Limited",
-            "address": "Mbezi Beach, Dar es Salaam",
-            "phone": "+255-22-277-3000",
-            "website": "https://www.serengetibreweries.com",
-            "image": "sbl.png",
-            "membership": 2,
-            "industry": "Beverages",
-            "description": "Quality beer and beverage producer"
-        },
-        {
-            "name": "NMB Bank Plc",
-            "address": "Ohio Street, Dar es Salaam",
-            "phone": "+255-22-217-1000",
-            "website": "https://www.nmbbank.co.tz",
-            "image": "nmb.png",
-            "membership": 3,
-            "industry": "Banking & Finance",
-            "description": "Innovative banking solutions"
+            "name": "CRDB Bank",
+            "address": "Plot 10, Mirambo Street, Dar es Salaam",
+            "phone": "+255-22-211-7442",
+            "website": "https://www.crdbbank.com",
+            "image": "crdb-logo.jpg",
+            "membershipLevel": 3,
+            "industry": "Banking"
         },
         {
             "name": "Tanzania Electric Supply Company",
-            "address": "Ubungo, Dar es Salaam",
+            "address": "Plot 114, Uhuru Street, Dar es Salaam",
             "phone": "+255-22-245-1111",
             "website": "https://www.tanesco.co.tz",
-            "image": "tanesco.png",
-            "membership": 1,
-            "industry": "Energy",
-            "description": "National power utility company"
+            "image": "tanesco-logo.jpg",
+            "membershipLevel": 2,
+            "industry": "Energy"
         },
         {
-            "name": "Azam Media Limited",
-            "address": "Mikocheni, Dar es Salaam",
-            "phone": "+255-22-277-4000",
+            "name": "Serengeti Breweries",
+            "address": "Plot 34, Nyerere Road, Dar es Salaam",
+            "phone": "+255-22-277-3000",
+            "website": "https://www.serengetibreweries.com",
+            "image": "sbl-logo.jpg",
+            "membershipLevel": 2,
+            "industry": "Manufacturing"
+        },
+        {
+            "name": "Azam Media",
+            "address": "Plot 35, Mwai Kibaki Road, Dar es Salaam",
+            "phone": "+255-22-277-5000",
             "website": "https://www.azam.tv",
-            "image": "azam.png",
-            "membership": 2,
-            "industry": "Media & Entertainment",
-            "description": "Leading media and entertainment company"
+            "image": "azam-logo.jpg",
+            "membershipLevel": 2,
+            "industry": "Media"
+        },
+        {
+            "name": "Tanzania Ports Authority",
+            "address": "Sokoine Drive, Dar es Salaam Port",
+            "phone": "+255-22-211-0601",
+            "website": "https://www.ports.go.tz",
+            "image": "tpa-logo.jpg",
+            "membershipLevel": 1,
+            "industry": "Logistics"
+        },
+        {
+            "name": "NMB Bank",
+            "address": "Plot 1, NMB House, Dar es Salaam",
+            "phone": "+255-22-217-1000",
+            "website": "https://www.nmbbank.co.tz",
+            "image": "nmb-logo.jpg",
+            "membershipLevel": 3,
+            "industry": "Banking"
         }
     ]
 }

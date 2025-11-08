@@ -4,18 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Discover Tanzania - History, demographics, and attractions of this beautiful East African nation">
-    <meta name="author" content="Your Name">
-
+    <meta name="description" content="Discover Tanzania - History, demographics, and attractions of this beautiful East African nation">
+    <meta name="author" content="Evance Katanga">
     <meta property="og:title" content="Discover Tanzania - Tanzania Global Business Chamber">
     <meta property="og:description" content="Explore the rich history, culture, and business opportunities in Tanzania">
-    <meta property="og:image" content="https://your-username.github.io/wdd231/chamber/images/tanzania-discover.jpg">
+    <meta property="og:image" content="images/logo.jpeg">
     <meta property="og:url" content="https://your-username.github.io/wdd231/chamber/discover.html">
 
     <title>Discover Tanzania - Tanzania Global Business Chamber</title>
-
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    
+    <link rel="icon" href="images/logo.jpeg" type="image/x-icon">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/discovery.css">
@@ -24,10 +22,10 @@
 <body>
     <header>
         <div class="header-content">
-            <div class="logo">
-                <img src="images/logo.png" alt="Tanzania Global Business Chamber Logo">
+            <a href="index.html" class="logo">
+                <img src="images/logo.jpeg" alt="Tanzania Global Business Chamber Logo">
                 <h1>Tanzania Global Business Chamber</h1>
-            </div>
+            </a>
             <nav>
                 <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
                 <ul class="nav-menu">
@@ -43,7 +41,10 @@
     <main>
         <section class="discover-hero">
             <h1>Discover Tanzania</h1>
-            <p>Explore the land of Mount Kilimanjaro, Serengeti, and Zanzibar</p>
+            <figure class="hero-image">
+                <img src="images/33.jpg" alt="Historical sites in Tanzania" loading="lazy">
+                <figcaption>Explore the land of Mount Kilimanjaro, Serengeti, and Zanzibar</figcaption>
+            </figure>
         </section>
 
         <div class="discover-content">
@@ -51,16 +52,12 @@
             <section class="history-section">
                 <h2>Our Rich History</h2>
                 <div class="history-content">
-                    <div class="history-text">
-                        <p>Tanzania, formed from the union of Tanganyika and Zanzibar in 1964, has a rich cultural
-                            heritage spanning centuries. From ancient trade routes to modern economic development, our
-                            nation continues to grow while preserving its unique identity.</p>
-                        <p>Home to some of the world's most famous archaeological sites and natural wonders, Tanzania
-                            offers both historical significance and modern business opportunities.</p>
-                    </div>
-                    <div class="history-image">
-                        <img src="images/tanzania-history.jpg" alt="Historical sites in Tanzania" loading="lazy">
-                    </div>
+                    <p>Tanzania, formed from the union of Tanganyika and Zanzibar in 1964, has a rich cultural heritage spanning centuries. From ancient trade routes to modern economic development, our nation continues to grow while preserving its unique identity.</p>
+                    <p>Home to some of the world's most famous archaeological sites and natural wonders, Tanzania offers both historical significance and modern business opportunities.</p>
+                    <figure class="history-image">
+                        <img src="images/30.jpg" alt="Historical sites in Tanzania" loading="lazy">
+                        <figcaption>Historical sites in Tanzania</figcaption>
+                    </figure>
                 </div>
             </section>
 
@@ -116,7 +113,7 @@
                         <figcaption>Ngorongoro Crater</figcaption>
                     </figure>
                     <figure class="gallery-item">
-                        <img src="images/tanzania-culture.jpg" alt="Traditional Culture" loading="lazy">
+                        <img src="images/culture.jpg" alt="Traditional Culture" loading="lazy">
                         <figcaption>Rich Cultural Heritage</figcaption>
                     </figure>
                 </div>
@@ -151,12 +148,12 @@
             <div class="contact-info">
                 <h3>Tanzania Global Business Chamber</h3>
                 <p>Dar es Salaam, Tanzania</p>
-                <p>Email: info@tgbc.org</p>
-                <p>Phone: +255-22-123-4567</p>
+                <p>Email: <a href="mailto:info@tgbc.org">info@tgbc.org</a></p>
+                <p>Phone: <a href="tel:+255221234567">+255-22-123-4567</a></p>
             </div>
             <div class="development-info">
                 <p>&copy; <span id="currentYear"></span> Tanzania Global Business Chamber</p>
-                <p>Your Name | WDD 231</p>
+                <p>Evance Katanga | WDD 231</p>
                 <p>Last Modified: <span id="lastModified"></span></p>
             </div>
         </div>
