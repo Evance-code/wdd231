@@ -1,76 +1,60 @@
-{
-    "members": [
-        {
-            "name": "Tanzania Breweries Limited",
-            "address": "Plot 1, Ubungo, Dar es Salaam",
-            "phone": "+255-22-277-4000",
-            "website": "https://www.tanzaniabreweries.com",
-            "image": "tbl-logo.jpg",
-            "membershipLevel": 3,
-            "industry": "Manufacturing"
-        },
-        {
-            "name": "Vodacom Tanzania",
-            "address": "Plot 72, Ali Hassan Mwinyi Road, Dar es Salaam",
-            "phone": "+255-22-222-0000",
-            "website": "https://www.vodacom.co.tz",
-            "image": "vodacom-logo.jpg",
-            "membershipLevel": 3,
-            "industry": "Telecommunications"
-        },
-        {
-            "name": "CRDB Bank",
-            "address": "Plot 10, Mirambo Street, Dar es Salaam",
-            "phone": "+255-22-211-7442",
-            "website": "https://www.crdbbank.com",
-            "image": "crdb-logo.jpg",
-            "membershipLevel": 3,
-            "industry": "Banking"
-        },
-        {
-            "name": "Tanzania Electric Supply Company",
-            "address": "Plot 114, Uhuru Street, Dar es Salaam",
-            "phone": "+255-22-245-1111",
-            "website": "https://www.tanesco.co.tz",
-            "image": "tanesco-logo.jpg",
-            "membershipLevel": 2,
-            "industry": "Energy"
-        },
-        {
-            "name": "Serengeti Breweries",
-            "address": "Plot 34, Nyerere Road, Dar es Salaam",
-            "phone": "+255-22-277-3000",
-            "website": "https://www.serengetibreweries.com",
-            "image": "sbl-logo.jpg",
-            "membershipLevel": 2,
-            "industry": "Manufacturing"
-        },
-        {
-            "name": "Azam Media",
-            "address": "Plot 35, Mwai Kibaki Road, Dar es Salaam",
-            "phone": "+255-22-277-5000",
-            "website": "https://www.azam.tv",
-            "image": "azam-logo.jpg",
-            "membershipLevel": 2,
-            "industry": "Media"
-        },
-        {
-            "name": "Tanzania Ports Authority",
-            "address": "Sokoine Drive, Dar es Salaam Port",
-            "phone": "+255-22-211-0601",
-            "website": "https://www.ports.go.tz",
-            "image": "tpa-logo.jpg",
-            "membershipLevel": 1,
-            "industry": "Logistics"
-        },
-        {
-            "name": "NMB Bank",
-            "address": "Plot 1, NMB House, Dar es Salaam",
-            "phone": "+255-22-217-1000",
-            "website": "https://www.nmbbank.co.tz",
-            "image": "nmb-logo.jpg",
-            "membershipLevel": 3,
-            "industry": "Banking"
-        }
-    ]
-}
+    {
+        "members": [
+            {
+                "name": "Dar Blue Logistics",
+                "address": "Kariakoo, Dar es Salaam",
+                "phone": "+255 22 111 0001",
+                "website": "https://example.com/darblue",
+                "membershipLevel": 3,
+                "industry": "Logistics"
+            },
+            {
+                "name": "Tanzania Green Foods",
+                "address": "Ilala, Dar es Salaam",
+                "phone": "+255 22 111 0002",
+                "website": "https://example.com/greenfoods",
+                "membershipLevel": 2,
+                "industry": "Agriculture"
+            },
+            {
+                "name": "Zanzibar Resorts Ltd",
+                "address": "Nungwi, Zanzibar",
+                "phone": "+255 24 111 0003",
+                "website": "https://example.com/zanzibarresorts",
+                "membershipLevel": 3,
+                "industry": "Tourism"
+            },
+            {
+                "name": "Arusha Textiles",
+                "address": "Arusha Town",
+                "phone": "+255 27 111 0004",
+                "website": "https://example.com/arusha-textiles",
+                "membershipLevel": 1,
+                "industry": "Manufacturing"
+            },
+            {
+                "name": "Lake Victoria Fisheries",
+                "address": "Mwanza",
+                "phone": "+255 28 111 0005",
+                "website": "https://example.com/victoria-fish",
+                "membershipLevel": 2,
+                "industry": "Fisheries"
+            },
+            {
+                "name": "Dodoma FinTech",
+                "address": "Dodoma City",
+                "phone": "+255 26 111 0006",
+                "website": "https://example.com/dodomafintech",
+                "membershipLevel": 1,
+                "industry": "Finance"
+            },
+            {
+                "name": "Mbeya Solar Solutions",
+                "address": "Mbeya",
+                "phone": "+255 25 111 0007",
+                "website": "https://example.com/mbeya-solar",
+                "membershipLevel": 3,
+                "industry": "Renewables"
+            }
+        ]
+    }
