@@ -1,60 +1,42 @@
+[
     {
-        "members": [
-            {
-                "name": "Dar Blue Logistics",
-                "address": "Kariakoo, Dar es Salaam",
-                "phone": "+255 22 111 0001",
-                "website": "https://example.com/darblue",
-                "membershipLevel": 3,
-                "industry": "Logistics"
-            },
-            {
-                "name": "Tanzania Green Foods",
-                "address": "Ilala, Dar es Salaam",
-                "phone": "+255 22 111 0002",
-                "website": "https://example.com/greenfoods",
-                "membershipLevel": 2,
-                "industry": "Agriculture"
-            },
-            {
-                "name": "Zanzibar Resorts Ltd",
-                "address": "Nungwi, Zanzibar",
-                "phone": "+255 24 111 0003",
-                "website": "https://example.com/zanzibarresorts",
-                "membershipLevel": 3,
-                "industry": "Tourism"
-            },
-            {
-                "name": "Arusha Textiles",
-                "address": "Arusha Town",
-                "phone": "+255 27 111 0004",
-                "website": "https://example.com/arusha-textiles",
-                "membershipLevel": 1,
-                "industry": "Manufacturing"
-            },
-            {
-                "name": "Lake Victoria Fisheries",
-                "address": "Mwanza",
-                "phone": "+255 28 111 0005",
-                "website": "https://example.com/victoria-fish",
-                "membershipLevel": 2,
-                "industry": "Fisheries"
-            },
-            {
-                "name": "Dodoma FinTech",
-                "address": "Dodoma City",
-                "phone": "+255 26 111 0006",
-                "website": "https://example.com/dodomafintech",
-                "membershipLevel": 1,
-                "industry": "Finance"
-            },
-            {
-                "name": "Mbeya Solar Solutions",
-                "address": "Mbeya",
-                "phone": "+255 25 111 0007",
-                "website": "https://example.com/mbeya-solar",
-                "membershipLevel": 3,
-                "industry": "Renewables"
-            }
-        ]
+        "name": "Tanzania Coffee Exporters Ltd",
+        "image": "images/logo.jpeg",
+        "phone": "+255 713 123 456",
+        "address": "1 Kivukoni Street, Dar es Salaam",
+        "website": "https://tanzaniacoffee.co.tz",
+        "membership": "Gold"
+    },
+    {
+        "name": "Swahili Tech Innovations",
+        "image": "images/11.jpg",
+        "phone": "+255 622 555 987",
+        "address": "12 Bagamoyo Road, Mikocheni, Dar es Salaam",
+        "website": "https://swahilitech.co.tz",
+        "membership": "Gold"
+    },
+    {
+        "name": "Serengeti Tours & Travel",
+        "image": "images/30.jpg",
+        "phone": "+255 764 234 890",
+        "address": "Arusha City Centre, Arusha, Tanzania",
+        "website": "https://serengetitours.co.tz",
+        "membership": "Gold"
+    },
+    {
+        "name": "Coastal Foods Distributors",
+        "image": "images/33.jpg",
+        "phone": "+255 715 654 321",
+        "address": "23 Nyerere Road, Temeke, Dar es Salaam",
+        "website": "https://coastalfoods.co.tz",
+        "membership": "Silver"
+    },
+    {
+        "name": "Zanzibar Marine Services",
+        "image": "images/45.jpg",
+        "phone": "+255 773 112 220",
+        "address": "Stone Town, Zanzibar",
+        "website": "https://zanzibarmarine.co.tz",
+        "membership": "Silver"
     }
+]
