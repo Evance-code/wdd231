@@ -1,0 +1,234 @@
+/* ==========================
+   Join Page Layout
+========================== */
+.join-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* Default to single column (mobile) */
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+/* ==========================
+   Form Styling
+========================== */
+.chamber-form {
+    display: flex;
+    flex-direction: column;
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.chamber-form label,
+.chamber-form fieldset {
+    margin-bottom: 1rem;
+    padding: 0;
+    border: none;
+}
+
+.chamber-form legend {
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.chamber-form label.top {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+}
+
+.chamber-form label.sbs {
+    display: block;
+    font-weight: 400;
+    margin-left: 1rem;
+    margin-bottom: 0.2rem;
+}
+
+.chamber-form input[type="text"],
+.chamber-form input[type="email"],
+.chamber-form input[type="tel"],
+.chamber-form textarea {
+    padding: 0.7rem;
+    border: 1px solid var(--gray-dark);
+    border-radius: 6px;
+    font-size: 1rem;
+    margin-top: 5px;
+
+    /* Visual feedback for required but invalid fields */
+    &:required:invalid {
+        border-left: 5px solid #d85757;
+    }
+}
+
+.chamber-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.submit-btn {
+    /* Styles inherited from .cta-btn in main.css */
+    width: 100%;
+    margin-top: 1rem;
+}
+
+/* ==========================
+   Membership Cards (Side Panel)
+========================== */
+.membership-cards-section h3 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.membership-cards-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* Default to 1 column on desktop side-panel */
+    gap: 1rem;
+}
+
+.membership-cards-grid .card {
+    background: var(--white);
+    padding: 1rem;
+    border-radius: var(--radius);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+
+    /* Unique border colors */
+    border-left: 5px solid #888;
+
+    /* Required Animation/Transition Base State */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* Unique Card Colors */
+.np-card {
+    border-left-color: #778899;
+}
+
+/* Light Slate Gray */
+.bronze-card {
+    border-left-color: #cd7f32;
+}
+
+.silver-card {
+    border-left-color: #c0c0c0;
+}
+
+.gold-card {
+    border-left-color: #ffd700;
+}
+
+.membership-cards-grid button {
+    background: var(--accent-color);
+    color: var(--white);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+/* Animation Delay to separate the display */
+.membership-cards-grid .card:nth-child(1) {
+    transition-delay: 0s;
+}
+
+.membership-cards-grid .card:nth-child(2) {
+    transition-delay: 0.15s;
+}
+
+.membership-cards-grid .card:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.membership-cards-grid .card:nth-child(4) {
+    transition-delay: 0.45s;
+}
+
+/* Class added by JS on load to trigger the animation */
+.show-cards .card {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ==========================
+   Modal Styling
+========================== */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Darker overlay */
+}
+
+.modal-content {
+    background-color: var(--white);
+    margin: 10% auto;
+    padding: 25px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 500px;
+    border-radius: var(--radius);
+    position: relative;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content h4 {
+    color: var(--accent-color);
+    margin-top: 0;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+
+/* ==========================
+   Media Query (Desktop Layout)
+========================== */
+@media (min-width: 768px) {
+
+    /* 1. Main Layout: Form (2 parts) on Left, Cards (1 part) on Right */
+    .join-layout {
+        grid-template-columns: 2fr 1fr;
+        align-items: start;
+    }
+
+    /* 2. Cards Grid: Stacks vertically in the side panel (1 column) */
+    .membership-cards-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 767px) {
+
+    /* 1. On Mobile, the cards are displayed below the form, stack in 2 columns for better use of space */
+    .membership-cards-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}

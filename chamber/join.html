@@ -1,11 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Apply to join the Tanzania Global Business Chamber and access exclusive membership benefits and networking opportunities." />
+    <meta name="author" content="Evance Hosea Katanga" />
+    <title>Tanzania Global Business Chamber | Join Us</title>
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/join.css" />
 </head>
+
 <body>
-    
+    <header class="header">
+        <div class="container header-content">
+            <div class="logo">
+                <h1>Tanzania Global Business Chamber</h1>
+            </div>
+            <nav class="nav">
+                <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html" class="active">Join</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main container">
+
+        <div class="join-layout">
+
+            <section class="membership-form-section">
+                <h2>Membership Application</h2>
+                <form method="get" action="thankyou.html" class="chamber-form">
+
+                    <label for="first-name" class="top">
+                        Applicant's First Name*
+                        <input type="text" id="first-name" name="first-name" title="Applicant's first name" required
+                            autocomplete="given-name">
+                    </label>
+
+                    <label for="last-name" class="top">
+                        Applicant's Last Name*
+                        <input type="text" id="last-name" name="last-name" title="Applicant's last name" required
+                            autocomplete="family-name">
+                    </label>
+
+                    <label for="org-title" class="top">
+                        Organizational Title* (Min 7 alpha, hyphens, or spaces)
+                        <input type="text" id="org-title" name="org-title" title="Applicant's organizational title"
+                            autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}" required>
+                    </label>
+
+                    <label for="email" class="top">
+                        Email Address*
+                        <input type="email" id="email" name="email" title="Applicant's email address"
+                            placeholder="example@chamber.org" required autocomplete="email">
+                    </label>
+
+                    <label for="phone" class="top">
+                        Mobile Phone Number*
+                        <input type="tel" id="phone" name="phone" title="Applicant's mobile phone number" required
+                            autocomplete="tel">
+                    </label>
+
+                    <label for="org-name" class="top">
+                        Business/Organization Name*
+                        <input type="text" id="org-name" name="org-name" title="Business or organization name" required
+                            autocomplete="organization">
+                    </label>
+
+                    <fieldset>
+                        <legend>Select Membership Level*</legend>
+                        <label class="sbs">
+                            <input type="radio" name="membership-level" value="np" required> NP Membership (Non-profit,
+                            No Fee)
+                        </label>
+                        <label class="sbs">
+                            <input type="radio" name="membership-level" value="bronze"> Bronze Membership
+                        </label>
+                        <label class="sbs">
+                            <input type="radio" name="membership-level" value="silver"> Silver Membership
+                        </label>
+                        <label class="sbs">
+                            <input type="radio" name="membership-level" value="gold"> Gold Membership
+                        </label>
+                    </fieldset>
+
+                    <label for="description" class="top">
+                        Business/Organization Description
+                        <textarea id="description" name="description"
+                            title="Description of the organization's activities"></textarea>
+                    </label>
+
+                    <input type="hidden" id="timestamp" name="timestamp">
+
+                    <input type="submit" value="Join the Chamber" class="submit-btn">
+
+                </form>
+            </section>
+
+            <section class="membership-cards-section">
+                <h3>Membership Levels & Benefits</h3>
+                <div id="card-grid" class="membership-cards-grid">
+
+                    <div class="card np-card">
+                        <h4>NP Membership</h4>
+                        <p>No fee. Designed for non-profit community organizations.</p>
+                        <button type="button" data-modal-target="#modal-np">View Benefits</button>
+                    </div>
+
+                    <div class="card bronze-card">
+                        <h4>Bronze Membership</h4>
+                        <p>Entry-level access to key networking events.</p>
+                        <button type="button" data-modal-target="#modal-bronze">View Benefits</button>
+                    </div>
+
+                    <div class="card silver-card">
+                        <h4>Silver Membership</h4>
+                        <p>Includes discounted training and business resources.</p>
+                        <button type="button" data-modal-target="#modal-silver">View Benefits</button>
+                    </div>
+
+                    <div class="card gold-card">
+                        <h4>Gold Membership</h4>
+                        <p>Premium access, advertising, and exclusive events.</p>
+                        <button type="button" data-modal-target="#modal-gold">View Benefits</button>
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+        <div id="modal-np" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h4>NP Membership Benefits</h4>
+                <ul>
+                    <li>Inclusion in the online directory.</li>
+                    <li>Access to monthly community forums.</li>
+                    <li>Eligibility for volunteer opportunities.</li>
+                </ul>
+            </div>
+        </div>
+        <div id="modal-bronze" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h4>Bronze Membership Benefits</h4>
+                <ul>
+                    <li>All NP benefits, plus:</li>
+                    <li>Discounted attendance at key networking events.</li>
+                    <li>Weekly e-newsletter updates.</li>
+                </ul>
+            </div>
+        </div>
+        <div id="modal-silver" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h4>Silver Membership Benefits</h4>
+                <ul>
+                    <li>All Bronze benefits, plus:</li>
+                    <li>20% discount on chamber training workshops.</li>
+                    <li>Quarterly feature opportunities in the digital magazine.</li>
+                    <li>Access to business resource library.</li>
+                </ul>
+            </div>
+        </div>
+        <div id="modal-gold" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h4>Gold Membership Benefits</h4>
+                <ul>
+                    <li>All Silver benefits, plus:</li>
+                    <li>Priority consideration for Home Page spotlight positions.</li>
+                    <li>Free passes to all annual events.</li>
+                    <li>Dedicated relationship manager.</li>
+                    <li>Private annual CEO roundtable invitation.</li>
+                </ul>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="contact-info">
+                <h3>Tanzania Global Business Chamber</h3>
+                <p>Dar es Salaam, Tanzania</p>
+                <p>Email: <a href="mailto:info@tgbc.org">info@tgbc.org</a></p>
+                <p>Phone: +255 22 123 4567</p>
+            </div>
+            <div class="development-info">
+                <p>&copy; <span id="currentYear"></span> Tanzania Global Business Chamber</p>
+                <p>Developed by <strong>Evance Hosea Katanga</strong> | WDD 231</p>
+                <p>Last Modified: <span id="lastModified"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 1. Footer Content and Timestamp
+        document.getElementById("currentYear").textContent = new Date().getFullYear();
+        document.getElementById("lastModified").textContent = document.lastModified;
+        document.getElementById("timestamp").value = new Date().toISOString();
+
+        // 2. Modal Functionality
+        const modalButtons = document.querySelectorAll('[data-modal-target]');
+        const closeButtons = document.querySelectorAll('.close-button');
+
+        modalButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const modal = document.querySelector(button.dataset.modalTarget);
+                if (modal) {
+                    modal.style.display = 'block';
+                }
+            });
+        });
+
+        closeButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const modal = button.closest('.modal');
+                modal.style.display = 'none';
+            });
+        });
+
+        window.onclick = function (event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = 'none';
+            }
+        };
+
+        // 3. W04 REQUIRED CARD ANIMATION TRIGGER
+        // This makes the cards visible by adding the 'show-cards' class defined in join.css
+        window.addEventListener('load', () => {
+            const cardGrid = document.querySelector('.membership-cards-grid');
+            if (cardGrid) {
+                // Use a small timeout to ensure the browser has rendered the page first
+                setTimeout(() => {
+                    cardGrid.classList.add('show-cards');
+                }, 50);
+            }
+        });
+    </script>
+    <script src="scripts/main.js"></script>
 </body>
+
 </html>

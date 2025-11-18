@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Thank you for applying to join the Tanzania Global Business Chamber. Your application has been received." />
+    <meta name="author" content="Evance Hosea Katanga" />
+    <title>Tanzania Global Business Chamber | Thank You</title>
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+    <link rel="stylesheet" href="styles/home.css" />
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <div class="logo">
+                <h1>Tanzania Global Business Chamber</h1>
+            </div>
+            <nav class="nav">
+                <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main container">
+
+        <section class="thankyou-message">
+            <h2>Application Received Successfully!</h2>
+            <p>Thank you for your interest in joining the Tanzania Global Business Chamber. We've received your
+                application and will review it promptly.</p>
+            <p>A chamber representative will contact you within **3 business days** regarding the next steps.</p>
+
+            <div class="confirmation-details">
+                <h3>Confirmation Details</h3>
+                <p><strong>Applicant Name:</strong> <span id="applicantName"></span></p>
+                <p><strong>Business Name:</strong> <span id="businessName"></span></p>
+                <p><strong>Email:</strong> <span id="emailAddress"></span></p>
+                <p><strong>Mobile:</strong> <span id="mobileNumber"></span></p>
+                <p class="timestamp-detail"><strong>Submission Date:</strong> <span id="submissionTimestamp"></span></p>
+            </div>
+
+            <p class="return-link"><a href="index.html" class="cta-btn">Return to Home Page</a></p>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="contact-info">
+                <h3>Tanzania Global Business Chamber</h3>
+                <p>Dar es Salaam, Tanzania</p>
+                <p>Email: <a href="mailto:info@tgbc.org">info@tgbc.org</a></p>
+                <p>Phone: +255 22 123 4567</p>
+            </div>
+            <div class="development-info">
+                <p>&copy; <span id="currentYear"></span> Tanzania Global Business Chamber</p>
+                <p>Developed by <strong>Evance Hosea Katanga</strong> | WDD 231</p>
+                <p>Last Modified: <span id="lastModified"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function displayData() {
+            // Get the URL search parameters (the data submitted by the GET form)
+            const params = new URLSearchParams(window.location.search);
+
+            // Function to safely get a value
+            const getValue = (key) => params.get(key) || 'N/A';
+
+            // 1. Get Required Field Data
+            const firstName = getValue('first-name');
+            const lastName = getValue('last-name');
+            const businessName = getValue('org-name');
+            const email = getValue('email');
+            const phone = getValue('phone');
+            // The timestamp comes from the hidden input field
+            const timestamp = getValue('timestamp');
+
+            // 2. Display the data in the confirmation details section
+            document.getElementById('applicantName').textContent = `${firstName} ${lastName}`;
+            document.getElementById('businessName').textContent = businessName;
+            document.getElementById('emailAddress').textContent = email;
+            document.getElementById('mobileNumber').textContent = phone;
+
+            // Format the timestamp for readability (optional but good practice)
+            try {
+                const date = new Date(timestamp);
+                document.getElementById('submissionTimestamp').textContent = date.toLocaleString();
+            } catch {
+                document.getElementById('submissionTimestamp').textContent = 'Date/Time Unknown';
+            }
+        }
+
+        // Run the function when the page loads
+        displayData();
+
+        // Footer Script (Same as index.html)
+        document.getElementById("currentYear").textContent = new Date().getFullYear();
+        document.getElementById("lastModified").textContent = document.lastModified;
+    </script>
+</body>
+
+</html>

@@ -9,13 +9,10 @@
     <meta name="author" content="Evance Hosea Katanga" />
     <title>Tanzania Global Business Chamber | Home</title>
 
-    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
 
-    <!-- Normalize and Styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
     <link rel="stylesheet" href="styles/home.css" />
 </head>
@@ -27,7 +24,7 @@
                 <h1>Tanzania Global Business Chamber</h1>
             </div>
             <nav class="nav">
-                <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+                <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
                 <ul class="nav-menu">
                     <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="discover.html">Discover</a></li>
@@ -40,7 +37,6 @@
 
     <main class="main">
 
-        <!-- Hero Section -->
         <section class="hero">
             <img src="images/45.jpg" alt="Dar es Salaam skyline" class="hero-image" loading="eager">
             <div class="hero-text">
@@ -51,7 +47,6 @@
             </div>
         </section>
 
-        <!-- Events Section -->
         <section class="events container">
             <h2>Upcoming Events</h2>
             <ul class="event-list">
@@ -63,7 +58,6 @@
             </ul>
         </section>
 
-        <!-- Weather Section -->
         <section class="weather container">
             <h2>Current Weather in Dar es Salaam</h2>
             <div class="weather-info">
@@ -72,11 +66,10 @@
             </div>
         </section>
 
-        <!-- Spotlight Section -->
         <section class="spotlights container">
             <h2>Member Spotlights</h2>
             <div id="spotlight-container" class="spotlight-grid">
-                <!-- JS will load 2–3 random spotlight cards here -->
+                <p>Loading member spotlights...</p>
             </div>
         </section>
 
@@ -98,7 +91,11 @@
         </div>
     </footer>
 
-    
+    <script>
+        document.getElementById("currentYear").textContent = new Date().getFullYear();
+        document.getElementById("lastModified").textContent = document.lastModified;
+    </script>
+
     <script src="scripts/weather.js"></script>
     <script src="scripts/spotlights.js"></script>
 </body>

@@ -1,0 +1,57 @@
+/* ==========================
+   Thank You Page Styling
+========================== */
+.thankyou-message {
+    text-align: center;
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--radius);
+    max-width: 700px;
+    margin: 3rem auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.thankyou-message h2 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.thankyou-message p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.confirmation-details {
+    text-align: left;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    border: 1px dashed var(--gray-light);
+    border-radius: var(--radius);
+    background: var(--gray-light);
+}
+
+.confirmation-details h3 {
+    text-align: center;
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.confirmation-details p {
+    font-size: 1rem;
+    margin: 0.7rem 0;
+    line-height: 1.4;
+}
+
+.confirmation-details strong {
+    display: inline-block;
+    width: 150px;
+    /* Aligns the data vertically */
+    color: var(--text-color);
+}
+
+.return-link {
+    margin-top: 2rem;
+    text-align: center;
+}
