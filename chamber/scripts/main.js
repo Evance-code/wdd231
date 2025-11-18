@@ -25,3 +25,14 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+// === Menu Toggle ===
+const menuToggle = document.querySelector(".menu-toggle");
+const navMenu = document.querySelector(".nav-menu");
+
+menuToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+});
+
+// === Footer Info ===
+document.getElementById("currentYear").textContent = new Date().getFullYear();
+document.getElementById("lastModified").textContent = document.lastModified;

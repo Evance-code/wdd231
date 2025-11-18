@@ -1,11 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Tanzania Global Business Chamber - Promoting business growth, networking, and opportunities across Tanzania." />
+    <meta name="author" content="Evance Hosea Katanga" />
+    <title>Tanzania Global Business Chamber | Home</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
+
+    <!-- Normalize and Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+    <link rel="stylesheet" href="styles/directory.css" />
 </head>
+
 <body>
-    
+    <header class="header">
+        <div class="container header-content">
+            <div class="logo">
+                <h1>Tanzania Global Business Chamber</h1>
+            </div>
+            <nav class="nav">
+                <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <img src="images/45.jpg" alt="Dar es Salaam skyline" class="hero-image">
+            <div class="hero-text">
+                <h2>Connecting Businesses. Empowering Growth.</h2>
+                <p>Join our network of innovators, entrepreneurs, and industry leaders shaping Tanzania's business
+                    future.</p>
+                <a href="join.html" class="cta-btn">Join the Chamber</a>
+            </div>
+        </section>
+
+        <!-- Events Section -->
+        <section class="events container">
+            <h2>Upcoming Events</h2>
+            <ul class="event-list">
+                <li><strong>Business Networking Forum</strong> — November 20, 2025, at Serena Hotel, Dar es Salaam</li>
+                <li><strong>Trade & Investment Expo</strong> — December 5–7, 2025, at Julius Nyerere Convention Centre
+                </li>
+                <li><strong>Women in Business Summit</strong> — January 15, 2026, at Arusha International Conference
+                    Centre</li>
+            </ul>
+        </section>
+
+        <!-- Weather Section -->
+        <section class="weather container">
+            <h2>Current Weather in Dar es Salaam</h2>
+            <div class="weather-info">
+                <p><span id="temperature"></span>°C | <span id="weather-desc"></span></p>
+                <div id="forecast"></div>
+            </div>
+        </section>
+
+        <!-- Spotlight Section -->
+        <section class="spotlights container">
+            <h2>Member Spotlights</h2>
+            <div id="spotlight-container" class="spotlight-grid">
+                <!-- JS will load 2–3 random spotlight cards here -->
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="contact-info">
+                <h3>Tanzania Global Business Chamber</h3>
+                <p>Dar es Salaam, Tanzania</p>
+                <p>Email: <a href="mailto:info@tgbc.org">info@tgbc.org</a></p>
+                <p>Phone: +255 22 123 4567</p>
+            </div>
+            <div class="development-info">
+                <p>&copy; <span id="currentYear"></span> Tanzania Global Business Chamber</p>
+                <p>Developed by <strong>Evance Hosea Katanga</strong> | WDD 231</p>
+                <p>Last Modified: <span id="lastModified"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/weather.js"></script>
+    <script src="scripts/spotlights.js"></script>
 </body>
+
 </html>
