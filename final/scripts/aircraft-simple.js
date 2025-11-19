@@ -1,13 +1,19 @@
-// Aircraft page functionality
-import { openModal, closeModal } from './modal.js';
-import { saveToLocalStorage, getFromLocalStorage } from './storage.js';
-
+// aircraft-simple.js - Non-module version for aircraft page
 let aircraftData = [];
 let filteredAircraft = [];
 
 document.addEventListener('DOMContentLoaded', async () => {
+    // Set current year
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    // Setup navigation
+    if (typeof setupNavigation === 'function') {
+        setupNavigation();
+    }
+
     await loadAircraftData();
     setupEventListeners();
+    setupModal();
 });
 
 async function loadAircraftData() {
@@ -18,8 +24,8 @@ async function loadAircraftData() {
         loadingMessage.style.display = 'block';
         errorMessage.style.display = 'none';
 
-        // Fixed path - using relative path from scripts folder
-        const response = await fetch('./data/aircraft.json');
+        // Use the correct path to your JSON file
+        const response = await fetch('data/aircraft.json');
 
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
@@ -57,8 +63,8 @@ function filterAircraft() {
     const categoryFilter = document.getElementById('categoryFilter');
     const searchInput = document.getElementById('searchInput');
 
-    const selectedCategory = categoryFilter.value;
-    const searchTerm = searchInput.value.toLowerCase();
+    const selectedCategory = categoryFilter ? categoryFilter.value : 'all';
+    const searchTerm = searchInput ? searchInput.value.toLowerCase() : '';
 
     filteredAircraft = aircraftData.filter(aircraft => {
         const matchesCategory = selectedCategory === 'all' || aircraft.category === selectedCategory;
@@ -178,4 +184,56 @@ function getAircraftUsage(category) {
     };
 
     return usageMap[category] || 'various';
+}
+
+function setupModal() {
+    // Close modal when clicking X
+    const closeButtons = document.querySelectorAll('.close-modal');
+    closeButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            closeModal();
+        });
+    });
+
+    // Close modal when clicking outside
+    const modals = document.querySelectorAll('.modal');
+    modals.forEach(modal => {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+    });
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeModal();
+        }
+    });
+}
+
+function openModal(content, modalId = 'aircraftModal') {
+    const modal = document.getElementById(modalId);
+    const modalBody = document.getElementById('modalBody');
+
+    if (modal && modalBody) {
+        modalBody.innerHTML = content;
+        modal.setAttribute('aria-hidden', 'false');
+        modal.style.display = 'block';
+
+        // Focus management for accessibility
+        const closeButton = modal.querySelector('.close-modal');
+        if (closeButton) {
+            closeButton.focus();
+        }
+    }
+}
+
+function closeModal(modalId = 'aircraftModal') {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.setAttribute('aria-hidden', 'true');
+        modal.style.display = 'none';
+    }
 }
