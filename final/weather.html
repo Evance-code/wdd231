@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Weather Tools - METAR and TAF data for flight planning and dispatch operations">
+    <meta name="author" content="Your Name">
+
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="Weather Tools - Flight Dispatch Resources">
+    <meta property="og:description" content="METAR and TAF data for flight planning">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourusername.github.io/wdd231/final/weather.html">
+
+    <title>Weather Tools - Flight Dispatch Resources</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="images/logo.png" alt="Flight Dispatch Logo" width="50" height="50">
+                <h1>Flight Dispatch Resources</h1>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle navigation menu">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aircraft.html">Aircraft Data</a></li>
+                    <li><a href="weather.html" class="active">Weather Tools</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Weather Tools</h1>
+                <p>Access METAR and TAF data for flight planning and operational decisions</p>
+            </div>
+        </section>
+
+        <section class="weather-search">
+            <div class="container">
+                <form id="weatherForm" class="weather-form">
+                    <div class="form-group">
+                        <label for="icaoCode">ICAO Airport Code:</label>
+                        <input type="text" id="icaoCode" name="icaoCode" placeholder="e.g., KJFK, EGLL"
+                            pattern="[A-Za-z]{4}" title="Enter a valid 4-letter ICAO code" required>
+                        <small>Enter a 4-letter ICAO airport code (e.g., KJFK for New York JFK)</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reportType">Report Type:</label>
+                        <select id="reportType" name="reportType">
+                            <option value="metar">METAR</option>
+                            <option value="taf">TAF</option>
+                            <option value="both">Both METAR and TAF</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Get Weather Data</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="weather-results">
+            <div class="container">
+                <div id="weatherResults">
+                    <!-- Weather results will be displayed here -->
+                </div>
+                <div id="weatherError" class="error-message" style="display: none;"></div>
+                <div id="recentSearches" class="recent-searches">
+                    <h3>Recent Searches</h3>
+                    <div id="recentList"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="weather-info">
+            <div class="container">
+                <h2>Understanding Weather Reports</h2>
+                <div class="info-cards">
+                    <div class="info-card">
+                        <h3>METAR</h3>
+                        <p>Meteorological Aerodrome Report - current weather conditions at an airport, updated hourly or
+                            when significant changes occur.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>TAF</h3>
+                        <p>Terminal Aerodrome Forecast - weather forecast for an airport, typically covering 24-30
+                            hours, updated every 6 hours.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; <span id="currentYear"></span> Flight Dispatch Resources. All rights reserved.</p>
+            <p>
+                <a href="attributions.html">Attributions</a> |
+                <a href="https://youtube.com/your-video-link" target="_blank">Project Video</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Weather Details Modal -->
+    <div id="weatherModal" class="modal" aria-hidden="true">
+        <div class="modal-content">
+            <button class="close-modal" aria-label="Close modal">&times;</button>
+            <div id="weatherModalBody">
+                <!-- Detailed weather information will be displayed here -->
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="scripts/weather.js"></script>
+</body>
+
+</html>

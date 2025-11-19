@@ -1,0 +1,122 @@
+[
+    {
+        "model": "Boeing 737-800",
+        "manufacturer": "Boeing",
+        "cruiseSpeed": "842 km/h",
+        "range": "5,765 km",
+        "image": "images/aircraft/737-800.jpg",
+        "category": "Commercial"
+    },
+    {
+        "model": "Boeing 787-9",
+        "manufacturer": "Boeing",
+        "cruiseSpeed": "913 km/h",
+        "range": "14,140 km",
+        "image": "images/aircraft/787-9.jpg",
+        "category": "Commercial"
+    },
+    {
+        "model": "Airbus A320neo",
+        "manufacturer": "Airbus",
+        "cruiseSpeed": "830 km/h",
+        "range": "6,300 km",
+        "image": "images/aircraft/a320neo.jpg",
+        "category": "Commercial"
+    },
+    {
+        "model": "Airbus A350-900",
+        "manufacturer": "Airbus",
+        "cruiseSpeed": "908 km/h",
+        "range": "15,000 km",
+        "image": "images/aircraft/a350.jpg",
+        "category": "Commercial"
+    },
+    {
+        "model": "Cessna 172",
+        "manufacturer": "Cessna",
+        "cruiseSpeed": "226 km/h",
+        "range": "1,288 km",
+        "image": "images/aircraft/cessna172.jpg",
+        "category": "General Aviation"
+    },
+    {
+        "model": "Cessna 208 Caravan",
+        "manufacturer": "Cessna",
+        "cruiseSpeed": "340 km/h",
+        "range": "1,982 km",
+        "image": "images/aircraft/caravan.jpg",
+        "category": "General Aviation"
+    },
+    {
+        "model": "ATR 72-600",
+        "manufacturer": "ATR",
+        "cruiseSpeed": "511 km/h",
+        "range": "1,528 km",
+        "image": "images/aircraft/atr72.jpg",
+        "category": "Regional"
+    },
+    {
+        "model": "Dash 8 Q400",
+        "manufacturer": "De Havilland",
+        "cruiseSpeed": "667 km/h",
+        "range": "2,522 km",
+        "image": "images/aircraft/q400.jpg",
+        "category": "Regional"
+    },
+    {
+        "model": "Embraer E195-E2",
+        "manufacturer": "Embraer",
+        "cruiseSpeed": "870 km/h",
+        "range": "4,815 km",
+        "image": "images/aircraft/e195e2.jpg",
+        "category": "Regional"
+    },
+    {
+        "model": "Gulfstream G650",
+        "manufacturer": "Gulfstream",
+        "cruiseSpeed": "956 km/h",
+        "range": "12,964 km",
+        "image": "images/aircraft/g650.jpg",
+        "category": "Business Jet"
+    },
+    {
+        "model": "Learjet 75",
+        "manufacturer": "Bombardier",
+        "cruiseSpeed": "860 km/h",
+        "range": "3,778 km",
+        "image": "images/aircraft/learjet75.jpg",
+        "category": "Business Jet"
+    },
+    {
+        "model": "Piper PA-34 Seneca",
+        "manufacturer": "Piper",
+        "cruiseSpeed": "370 km/h",
+        "range": "1,535 km",
+        "image": "images/aircraft/pa34.jpg",
+        "category": "General Aviation"
+    },
+    {
+        "model": "Helicopter Bell 412",
+        "manufacturer": "Bell",
+        "cruiseSpeed": "226 km/h",
+        "range": "745 km",
+        "image": "images/aircraft/bell412.jpg",
+        "category": "Helicopter"
+    },
+    {
+        "model": "Robinson R44",
+        "manufacturer": "Robinson",
+        "cruiseSpeed": "204 km/h",
+        "range": "560 km",
+        "image": "images/aircraft/r44.jpg",
+        "category": "Helicopter"
+    },
+    {
+        "model": "Antonov AN-26",
+        "manufacturer": "Antonov",
+        "cruiseSpeed": "440 km/h",
+        "range": "2,550 km",
+        "image": "images/aircraft/an26.jpg",
+        "category": "Cargo"
+    }
+]
