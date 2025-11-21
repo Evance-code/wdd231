@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Distance & Planner</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="icon" href="data/transport_14720160.png" type="image/x-icon">
+    <style>
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input,
+        button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 1rem;
+        }
+
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            background: #e3f2fd;
+            border-radius: 5px;
+        }
+
+        .autocomplete-items {
+            position: absolute;
+            border: 1px solid #d4d4d4;
+            border-bottom: none;
+            border-top: none;
+            z-index: 99;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+        }
+
+        .autocomplete-item {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .autocomplete-item:hover {
+            background-color: #e9e9e9;
+        }
+
+        .autocomplete {
+            position: relative;
+            display: block;
+        }
+
+        #map {
+            height: 400px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo-link">
+                <div class="logo"><img src="data/transport_14720160.png" width="50" height="50">
+                    <h1>Flight Dispatch Resources</h1>
+                </div>
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aircraft.html">Aircraft Data</a></li>
+                    <li><a href="weather.html">Weather Tools</a></li>
+                    <li><a href="distance.html" class="active">Flight Planner</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2>Flight Distance & Mini Planner</h2>
+
+            <label>Departure ICAO:</label>
+            <div class="autocomplete"><input type="text" id="depIcao" maxlength="4"></div>
+
+            <label>Arrival ICAO:</label>
+            <div class="autocomplete"><input type="text" id="arrIcao" maxlength="4"></div>
+
+            <label>Cruise Speed (knots, default 450):</label>
+            <input type="number" id="speed" placeholder="450">
+
+            <button id="calculateBtn">Calculate</button>
+
+            <div id="result" class="result"></div>
+            <div id="map"></div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; <span id="currentYear"></span> Flight Dispatch Resources</p>
+        </div>
+    </footer>
+
+    <script src="scripts/icaoList.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="scripts/distance-map.js"></script>
+</body>
+
+</html>

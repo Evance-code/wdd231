@@ -106,3 +106,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+// minimal main script for theme toggle and small UI helpers
+(function () {
+    const t = document.getElementById('themeToggle');
+    if (!t) return;
+    const root = document.documentElement;
+    t.addEventListener('click', () => {
+        const dark = root.getAttribute('data-theme') === 'dark';
+        if (dark) { root.removeAttribute('data-theme'); t.textContent = '☀️ Theme'; }
+        else { root.setAttribute('data-theme', 'dark'); t.textContent = '🌙 Dark'; }
+    });
+})();

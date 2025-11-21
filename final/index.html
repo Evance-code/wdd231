@@ -6,35 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="Flight Dispatch Resources - Comprehensive tools for flight dispatchers including aircraft data and weather information">
-    <meta name="author" content="Your Name">
-
-    <!-- Open Graph tags -->
-    <meta property="og:title" content="Flight Dispatch Resources">
-    <meta property="og:description" content="Comprehensive tools for flight dispatchers">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://yourusername.github.io/wdd231/final/">
-    <meta property="og:image" content="images/logo.png">
-
     <title>Flight Dispatch Resources - Home</title>
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="data/transport_14720160.png" type="image/x-icon">
 </head>
 
 <body>
     <header>
         <div class="header-content">
-            <div class="logo">
-                <img src="images/logo.png" alt="Flight Dispatch Logo" width="50" height="50">
-                <h1>Flight Dispatch Resources</h1>
-            </div>
-            <button class="menu-toggle" aria-label="Toggle navigation menu">
-                <span class="hamburger"></span>
-            </button>
+            <a href="index.html" class="logo-link">
+                <div class="logo">
+                    <img src="data/transport_14720160.png" alt="Flight Dispatch Logo" width="50" height="50">
+                    <h1>Flight Dispatch Resources</h1>
+                </div>
+            </a>
             <nav class="main-nav">
                 <ul>
                     <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="aircraft.html">Aircraft Data</a></li>
                     <li><a href="weather.html">Weather Tools</a></li>
+                    <li><a href="distance.html">Distance Calculator</a></li>
                 </ul>
             </nav>
         </div>
@@ -44,11 +35,12 @@
         <section class="hero">
             <div class="hero-content">
                 <h2>Essential Tools for Flight Dispatchers</h2>
-                <p>Access comprehensive aircraft specifications and real-time weather data to support flight planning
-                    and operations.</p>
+                <p>Access aircraft specifications, real-time weather, and calculate flight distances to support flight
+                    planning.</p>
                 <div class="hero-buttons">
                     <a href="aircraft.html" class="btn btn-primary">View Aircraft Data</a>
                     <a href="weather.html" class="btn btn-secondary">Check Weather</a>
+                    <a href="distance.html" class="btn btn-secondary">Flight Distance Calculator</a>
                 </div>
             </div>
         </section>
@@ -59,35 +51,15 @@
                 <div class="features-grid">
                     <div class="feature-card">
                         <h3>Aircraft Database</h3>
-                        <p>Comprehensive specifications for 15+ aircraft types with detailed performance data.</p>
+                        <p>Comprehensive specifications for multiple aircraft types with detailed performance data.</p>
                     </div>
                     <div class="feature-card">
                         <h3>Weather Tools</h3>
                         <p>METAR and TAF data retrieval for airports worldwide with user-friendly interface.</p>
                     </div>
                     <div class="feature-card">
-                        <h3>Dispatch Resources</h3>
-                        <p>Essential information and tools to support flight planning and operational decisions.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="quick-stats">
-            <div class="container">
-                <h2>At a Glance</h2>
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <span class="stat-number" id="aircraftCount">15</span>
-                        <span class="stat-label">Aircraft Types</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-number">24/7</span>
-                        <span class="stat-label">Weather Updates</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-number">Global</span>
-                        <span class="stat-label">Coverage</span>
+                        <h3>Distance Calculator</h3>
+                        <p>Calculate flight distance and estimated flight time between any two airports.</p>
                     </div>
                 </div>
             </div>
@@ -97,14 +69,9 @@
     <footer>
         <div class="footer-content">
             <p>&copy; <span id="currentYear"></span> Flight Dispatch Resources. All rights reserved.</p>
-            <p>
-                <a href="attributions.html">Attributions</a> |
-                <a href="https://youtube.com/your-video-link" target="_blank">Project Video</a>
-            </p>
         </div>
     </footer>
 
-    <!-- Use regular script instead of module for main navigation -->
     <script src="scripts/main.js"></script>
 </body>
 

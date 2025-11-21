@@ -1,181 +1,129 @@
-// Aircraft page functionality
-import { openModal, closeModal } from './modal.js';
-import { saveToLocalStorage, getFromLocalStorage } from './storage.js';
+/**
+ * main.js
+ * This file contains global JavaScript logic used across all pages of the application,
+ * primarily for handling the theme toggle and mobile navigation.
+ */
 
-let aircraftData = [];
-let filteredAircraft = [];
+// --- Global DOM Selectors ---
+const mainDOMElements = {
+    themeToggle: document.getElementById('themeToggle'),
+    mobileMenuToggle: document.querySelector('.menu-toggle'),
+    mainNav: document.querySelector('.main-nav'),
+    currentYearSpan: document.getElementById('currentYear')
+};
 
-document.addEventListener('DOMContentLoaded', async () => {
-    await loadAircraftData();
-    setupEventListeners();
-});
+// --- Theme Management ---
 
-async function loadAircraftData() {
-    const loadingMessage = document.getElementById('loadingMessage');
-    const errorMessage = document.getElementById('errorMessage');
+const THEME_KEY = 'aviationTrackerTheme';
+const PREFERRED_DARK = '(prefers-color-scheme: dark)';
 
-    try {
-        loadingMessage.style.display = 'block';
-        errorMessage.style.display = 'none';
+/**
+ * Sets the theme class on the document element and saves the preference to localStorage.
+ * @param {string} theme - 'light' or 'dark'.
+ */
+const setTheme = (theme) => {
+    const isDark = theme === 'dark';
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem(THEME_KEY, theme);
 
-        // Fixed path - using relative path from scripts folder
-        const response = await fetch('./data/aircraft.json');
+    // Update button text/icon for accessibility and clarity
+    if (mainDOMElements.themeToggle) {
+        mainDOMElements.themeToggle.innerHTML = isDark
+            ? '🌙 Dark Mode'
+            : '☀️ Light Mode';
+        mainDOMElements.themeToggle.setAttribute('aria-label', `Switch to ${isDark ? 'light' : 'dark'} mode`);
+    }
+};
 
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
+/**
+ * Toggles the theme between light and dark.
+ */
+const toggleTheme = () => {
+    const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
+};
+
+/**
+ * Initializes the theme based on local storage or system preference.
+ */
+const initializeTheme = () => {
+    const savedTheme = localStorage.getItem(THEME_KEY);
+
+    // 1. Check for saved preference
+    if (savedTheme) {
+        setTheme(savedTheme);
+    }
+    // 2. Check for system preference if no saved theme exists
+    else if (window.matchMedia(PREFERRED_DARK).matches) {
+        setTheme('dark');
+    }
+    // 3. Default to light
+    else {
+        setTheme('light');
+    }
+
+    // Add listener for changes in system preference *after* initial load
+    window.matchMedia(PREFERRED_DARK).addEventListener('change', (e) => {
+        // Only update if no explicit user preference is set in localStorage
+        if (!localStorage.getItem(THEME_KEY)) {
+            setTheme(e.matches ? 'dark' : 'light');
         }
-
-        aircraftData = await response.json();
-        filteredAircraft = [...aircraftData];
-
-        displayAircraft(filteredAircraft);
-        loadingMessage.style.display = 'none';
-
-    } catch (error) {
-        console.error('Error loading aircraft data:', error);
-        loadingMessage.style.display = 'none';
-        errorMessage.style.display = 'block';
-        errorMessage.textContent = 'Failed to load aircraft data. Please try again later.';
-    }
-}
-
-function setupEventListeners() {
-    // Category filter
-    const categoryFilter = document.getElementById('categoryFilter');
-    if (categoryFilter) {
-        categoryFilter.addEventListener('change', filterAircraft);
-    }
-
-    // Search input
-    const searchInput = document.getElementById('searchInput');
-    if (searchInput) {
-        searchInput.addEventListener('input', filterAircraft);
-    }
-}
-
-function filterAircraft() {
-    const categoryFilter = document.getElementById('categoryFilter');
-    const searchInput = document.getElementById('searchInput');
-
-    const selectedCategory = categoryFilter.value;
-    const searchTerm = searchInput.value.toLowerCase();
-
-    filteredAircraft = aircraftData.filter(aircraft => {
-        const matchesCategory = selectedCategory === 'all' || aircraft.category === selectedCategory;
-        const matchesSearch = aircraft.model.toLowerCase().includes(searchTerm) ||
-            aircraft.manufacturer.toLowerCase().includes(searchTerm) ||
-            aircraft.category.toLowerCase().includes(searchTerm);
-
-        return matchesCategory && matchesSearch;
     });
 
-    displayAircraft(filteredAircraft);
-}
+    // Attach click listener to the toggle button
+    if (mainDOMElements.themeToggle) {
+        mainDOMElements.themeToggle.addEventListener('click', toggleTheme);
+    }
+};
 
-function displayAircraft(aircraft) {
-    const grid = document.getElementById('aircraftGrid');
 
-    if (!grid) return;
+// --- Mobile Navigation Management ---
 
-    if (aircraft.length === 0) {
-        grid.innerHTML = '<p class="no-results">No aircraft found matching your criteria.</p>';
-        return;
+/**
+ * Toggles the visibility and accessibility attributes of the mobile navigation menu.
+ */
+const toggleMobileMenu = () => {
+    const { mobileMenuToggle, mainNav } = mainDOMElements;
+    if (!mobileMenuToggle || !mainNav) return;
+
+    const isActive = mainNav.classList.toggle('active');
+    mobileMenuToggle.classList.toggle('active', isActive);
+    mobileMenuToggle.setAttribute('aria-expanded', isActive);
+
+    // Toggle scroll lock on the body
+    document.body.style.overflow = isActive ? 'hidden' : '';
+};
+
+
+// --- Footer Initialization ---
+
+/**
+ * Sets the current year in the footer.
+ */
+const initializeFooter = () => {
+    if (mainDOMElements.currentYearSpan) {
+        mainDOMElements.currentYearSpan.textContent = new Date().getFullYear();
+    }
+};
+
+// --- Initialization ---
+
+/**
+ * Sets up all global event listeners and initial configurations.
+ */
+const initializeGlobalListeners = () => {
+    // 1. Theme Initialization
+    initializeTheme();
+
+    // 2. Mobile Menu Listener
+    if (mainDOMElements.mobileMenuToggle) {
+        mainDOMElements.mobileMenuToggle.addEventListener('click', toggleMobileMenu);
     }
 
-    // Use array method to generate HTML
-    const aircraftHTML = aircraft.map(aircraft =>
-        createAircraftCard(aircraft)
-    ).join('');
+    // 3. Footer Initialization
+    initializeFooter();
+};
 
-    grid.innerHTML = aircraftHTML;
-
-    // Add event listeners to view details buttons
-    setupAircraftDetailButtons();
-}
-
-function createAircraftCard(aircraft) {
-    // Using template literals for string construction
-    return `
-        <div class="aircraft-card" data-id="${aircraft.model}">
-            <img src="${aircraft.image}" alt="${aircraft.model}" class="aircraft-image" loading="lazy">
-            <div class="aircraft-info">
-                <h3>${aircraft.model}</h3>
-                <div class="aircraft-spec">
-                    <span>Manufacturer:</span>
-                    <span>${aircraft.manufacturer}</span>
-                </div>
-                <div class="aircraft-spec">
-                    <span>Cruise Speed:</span>
-                    <span>${aircraft.cruiseSpeed}</span>
-                </div>
-                <div class="aircraft-spec">
-                    <span>Max Range:</span>
-                    <span>${aircraft.range}</span>
-                </div>
-                <span class="aircraft-category">${aircraft.category}</span>
-                <button class="btn btn-primary view-details" style="margin-top: 1rem; width: 100%;">
-                    View Details
-                </button>
-            </div>
-        </div>
-    `;
-}
-
-function setupAircraftDetailButtons() {
-    const detailButtons = document.querySelectorAll('.view-details');
-
-    detailButtons.forEach(button => {
-        button.addEventListener('click', (e) => {
-            const aircraftCard = e.target.closest('.aircraft-card');
-            const aircraftModel = aircraftCard.dataset.id;
-            const aircraft = aircraftData.find(a => a.model === aircraftModel);
-
-            if (aircraft) {
-                showAircraftDetails(aircraft);
-            }
-        });
-    });
-}
-
-function showAircraftDetails(aircraft) {
-    const modalContent = `
-        <h2>${aircraft.model}</h2>
-        <img src="${aircraft.image}" alt="${aircraft.model}" style="width: 100%; max-height: 300px; object-fit: cover; border-radius: 8px; margin: 1rem 0;">
-        <div style="display: grid; gap: 1rem; margin-top: 1rem;">
-            <div style="display: flex; justify-content: space-between;">
-                <strong>Manufacturer:</strong>
-                <span>${aircraft.manufacturer}</span>
-            </div>
-            <div style="display: flex; justify-content: space-between;">
-                <strong>Cruise Speed:</strong>
-                <span>${aircraft.cruiseSpeed}</span>
-            </div>
-            <div style="display: flex; justify-content: space-between;">
-                <strong>Max Range:</strong>
-                <span>${aircraft.range}</span>
-            </div>
-            <div style="display: flex; justify-content: space-between;">
-                <strong>Category:</strong>
-                <span>${aircraft.category}</span>
-            </div>
-        </div>
-        <p style="margin-top: 1.5rem; padding: 1rem; background: var(--card-bg); border-radius: 4px;">
-            This ${aircraft.model} by ${aircraft.manufacturer} is ideal for ${getAircraftUsage(aircraft.category)} operations.
-        </p>
-    `;
-
-    openModal(modalContent, 'aircraftModal');
-}
-
-function getAircraftUsage(category) {
-    const usageMap = {
-        'Commercial': 'commercial passenger',
-        'Regional': 'regional',
-        'General Aviation': 'general aviation and training',
-        'Business Jet': 'corporate and business',
-        'Helicopter': 'rotary-wing',
-        'Cargo': 'cargo and freight'
-    };
-
-    return usageMap[category] || 'various';
-}
+// Start the global application logic after the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', initializeGlobalListeners);
