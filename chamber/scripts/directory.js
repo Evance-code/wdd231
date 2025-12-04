@@ -3,6 +3,16 @@ let members = [];
 let currentView = 'grid';
 
 // Fetch and display members
+// scripts/discover.js
+
+fetch("data/discover.json")
+    .then(response => response.json())
+    .then(data => {
+        console.log("Loaded Discover Data:", data);
+        // you will display it here...
+    })
+    .catch(error => console.error("Error loading JSON:", error));
+
 async function getMembers() {
     try {
         const response = await fetch('data/members.json');

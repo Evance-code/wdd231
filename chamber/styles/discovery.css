@@ -1,332 +1,113 @@
-/* =========================
-   DISCOVER TANZANIA STYLES
-   Author: Evance Katanga
-   ========================= */
+/* ==========================
+   Discover Page Styles
+========================== */
 
-/* ---------- CSS RESET ---------- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: "Poppins", "Segoe UI", sans-serif;
-    color: #222;
-    background-color: #f9f9f9;
-    line-height: 1.6;
-}
-
-/* ---------- HEADER ---------- */
-header {
-    background: linear-gradient(90deg, #0077be, #006400);
-    color: #fff;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-}
-
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    max-width: 1200px;
-    margin: auto;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    text-decoration: none;
-    color: #fff;
-}
-
-.logo img {
-    width: 50px;
-    height: 50px;
-    border-radius: 10px;
-    object-fit: cover;
-}
-
-.logo h1 {
-    font-size: 1.3rem;
-    font-weight: 600;
-}
-
-/* ---------- NAVIGATION ---------- */
-nav {
-    position: relative;
-}
-
-.menu-toggle {
-    display: none;
-    font-size: 1.8rem;
-    background: none;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-}
-
-.nav-menu {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-}
-
-.nav-menu a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.nav-menu a:hover,
-.nav-menu a.active {
-    color: #ffd700;
-    /* gold accent */
-}
-
-/* ---------- HERO SECTION ---------- */
-.discover-hero {
-    text-align: center;
-    padding: 3rem 1rem;
-    background: linear-gradient(180deg, #0077be, #1e90ff);
-    color: #fff;
-}
-
-.discover-hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    font-weight: 700;
-}
-
-.hero-image {
-    margin-top: 1.5rem;
-}
-
-.hero-image img {
-    width: 100%;
-    max-width: 800px;
-    border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-}
-
-.hero-image figcaption {
-    margin-top: 0.5rem;
-    font-style: italic;
-    opacity: 0.9;
-}
-
-/* ---------- DISCOVER CONTENT ---------- */
-.discover-content {
-    max-width: 1200px;
-    margin: 3rem auto;
-    padding: 0 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
-}
-
-/* ---------- HISTORY SECTION ---------- */
-.history-section h2,
-.demographics-section h2,
-.gallery-section h2,
-.events-section h2 {
-    font-size: 2rem;
-    color: #006400;
-    margin-bottom: 1.2rem;
-    text-align: center;
-    position: relative;
-}
-
-.history-section h2::after,
-.demographics-section h2::after,
-.gallery-section h2::after,
-.events-section h2::after {
-    content: "";
-    display: block;
-    width: 80px;
-    height: 4px;
-    background: #ffd700;
-    margin: 0.6rem auto;
-    border-radius: 2px;
-}
-
-.history-content {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 2rem;
-}
-
-.history-content p {
-    flex: 1 1 300px;
-    color: #333;
-}
-
-.history-image img {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* ---------- DEMOGRAPHICS ---------- */
-.stats-grid {
+/* Grid container for member cards */
+.member-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 1.5rem;
-    margin-top: 1.5rem;
+    grid-template-areas:
+        "card1"
+        "card2"
+        "card3"
+        "card4"
+        "card5"
+        "card6"
+        "card7"
+        "card8";
 }
 
-.stat-card {
-    background: #fff;
+/* Individual member cards */
+.member-card {
+    background-color: #fff;
     border-radius: 12px;
-    padding: 1.5rem;
+    padding: 1rem;
     text-align: center;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
-.stat-card:hover {
-    transform: translateY(-5px);
-}
-
-.stat-card h3 {
-    color: #0077be;
+.member-card h2 {
+    color: #283832;
+    font-size: 1.2rem;
     margin-bottom: 0.5rem;
 }
 
-.stat-number {
-    font-size: 1.8rem;
-    color: #006400;
-    font-weight: 600;
+.member-card figure {
+    margin: 0.5rem 0;
 }
 
-/* ---------- GALLERY ---------- */
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.2rem;
-    margin-top: 1.5rem;
-}
-
-.gallery-item img {
+.member-card img {
     width: 100%;
+    max-width: 300px;
     height: 200px;
     object-fit: cover;
-    border-radius: 12px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
 }
 
-.gallery-item img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+.member-card address {
+    font-style: normal;
+    color: #555;
+    margin-bottom: 0.5rem;
 }
 
-.gallery-item figcaption {
-    text-align: center;
-    margin-top: 0.5rem;
+.member-card p {
     color: #333;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
 }
 
-/* ---------- EVENTS SECTION ---------- */
-.events-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-    margin-top: 1.5rem;
-}
-
-.event-card {
-    background: #fff;
-    padding: 1.5rem;
-    border-left: 5px solid #0077be;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-    transition: border-color 0.3s ease;
-}
-
-.event-card:hover {
-    border-color: #ffd700;
-}
-
-.event-card h3 {
-    color: #006400;
-    margin-bottom: 0.5rem;
-}
-
-.event-date {
-    color: #0077be;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-}
-
-/* ---------- FOOTER ---------- */
-footer {
-    background: #111;
+.member-card .cta-btn {
+    background-color: #52977e;
     color: #fff;
-    padding: 2rem 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
 }
 
-.footer-content {
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 2rem;
+.member-card .cta-btn:hover {
+    background-color: #3b7c65;
 }
 
-.contact-info a,
-.development-info a {
-    color: #ffd700;
-    text-decoration: none;
-}
+/* ==========================
+   Grid Layouts
+========================== */
 
-.contact-info a:hover {
-    text-decoration: underline;
-}
-
-.development-info {
-    font-size: 0.9rem;
-    opacity: 0.85;
-}
-
-/* ---------- RESPONSIVE ---------- */
-@media (max-width: 768px) {
-    .header-content {
-        flex-wrap: wrap;
+/* Small screens: 1 column */
+@media (max-width: 640px) {
+    .member-grid {
+        grid-template-areas:
+            "card1"
+            "card2"
+            "card3"
+            "card4"
+            "card5"
+            "card6"
+            "card7"
+            "card8";
+        grid-template-columns: 1fr;
     }
+}
 
-    .menu-toggle {
-        display: block;
+/* Medium screens: 2 columns */
+@media (min-width: 641px) and (max-width: 1024px) {
+    .member-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "card1 card2"
+            "card3 card4"
+            "card5 card6"
+            "card7 card8";
     }
+}
 
-    .nav-menu {
-        flex-direction: column;
-        background: #006400;
-        position: absolute;
-        right: 0;
-        top: 100%;
-        width: 220px;
-        display: none;
-        padding: 1rem;
-        border-radius: 0 0 8px 8px;
-    }
-
-    .nav-menu.show {
-        display: flex;
-    }
-
-    .history-content {
-        flex-direction: column;
+/* Large screens: 4 columns */
+@media (min-width: 1025px) {
+    .member-grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            "card1 card2 card3 card4"
+            "card5 card6 card7 card8";
     }
 }

@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Dar Es Salaam Trade Hub",
+        "address": "123 Main St, Dar es Salaam, Tanzania",
+        "description": "A bustling business center connecting local and international trade partners.",
+        "image": "images/1.webp"
+    },
+    {
+        "name": "Tanzania Tech Incubator",
+        "address": "45 Innovation Ave, Dar es Salaam",
+        "description": "Supporting tech startups and entrepreneurs with workspace and mentorship.",
+        "image": "images/2.webp"
+    },
+    {
+        "name": "Serene Coffee Exporters",
+        "address": "78 Coffee Rd, Arusha, Tanzania",
+        "description": "Leading exporter of premium Tanzanian coffee products worldwide.",
+        "image": "images/3.webp"
+    },
+    {
+        "name": "Safari Adventures Ltd",
+        "address": "99 Safari Blvd, Arusha",
+        "description": "Tourism company specializing in unique safari experiences across Tanzania.",
+        "image": "images/4.webp"
+    },
+    {
+        "name": "Greenfields Agriculture Co.",
+        "address": "12 Farm Lane, Dodoma, Tanzania",
+        "description": "Innovative agricultural solutions for local farmers and export markets.",
+        "image": "images/5.webp"
+    },
+    {
+        "name": "Tanzanite Gems Ltd",
+        "address": "55 Gem Street, Mererani, Tanzania",
+        "description": "World-renowned Tanzanite gemstone supplier and jeweler.",
+        "image": "images/6.webp"
+    },
+    {
+        "name": "Coastal Shipping Co.",
+        "address": "33 Harbor Rd, Dar es Salaam",
+        "description": "Reliable shipping and logistics solutions along the East African coast.",
+        "image": "images/7.webp"
+    },
+    {
+        "name": "Urban Fashion Hub",
+        "address": "22 Market St, Dar es Salaam",
+        "description": "Showcasing modern Tanzanian fashion designers and retailers.",
+        "image": "images/2.webp"
+    }
+]
