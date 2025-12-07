@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "title": "Recording Session",
+        "description": "High-quality recording with professional microphones and room acoustics.",
+        "price": "$50/hr",
+        "duration": "1 hour",
+        "favorite": true
+    },
+    {
+        "id": 2,
+        "title": "Mixing",
+        "description": "Professional mixing for clarity and balance.",
+        "price": "$40/hr",
+        "duration": "1 hour",
+        "favorite": false
+    },
+    {
+        "id": 3,
+        "title": "Mastering",
+        "description": "Mastering tracks for commercial release quality.",
+        "price": "$60/track",
+        "duration": "1 track",
+        "favorite": true
+    },
+    {
+        "id": 4,
+        "title": "Beat Production",
+        "description": "Custom beat creation for hip-hop, R&B, or gospel.",
+        "price": "$80/beat",
+        "duration": "Per beat",
+        "favorite": false
+    },
+    {
+        "id": 5,
+        "title": "Voiceover Recording",
+        "description": "Professional voiceover recording for commercials, podcasts.",
+        "price": "$30/hr",
+        "duration": "1 hour",
+        "favorite": false
+    },
+    {
+        "id": 6,
+        "title": "Podcast Editing",
+        "description": "Editing and producing podcasts with clean sound.",
+        "price": "$35/episode",
+        "duration": "1 episode",
+        "favorite": true
+    },
+    {
+        "id": 7,
+        "title": "Audio Restoration",
+        "description": "Clean and restore old or damaged audio recordings.",
+        "price": "$25/hr",
+        "duration": "1 hour",
+        "favorite": false
+    },
+    {
+        "id": 8,
+        "title": "Session Musicians",
+        "description": "Hire skilled musicians for recordings.",
+        "price": "$70/hr",
+        "duration": "1 hour",
+        "favorite": false
+    },
+    {
+        "id": 9,
+        "title": "Jingle Production",
+        "description": "Create catchy jingles for marketing campaigns.",
+        "price": "$100/jingle",
+        "duration": "Per jingle",
+        "favorite": true
+    },
+    {
+        "id": 10,
+        "title": "Live Recording",
+        "description": "Record live performances with multiple tracks.",
+        "price": "$60/hr",
+        "duration": "1 hour",
+        "favorite": false
+    },
+    {
+        "id": 11,
+        "title": "Instrumental Mixing",
+        "description": "Mix instrumental tracks professionally.",
+        "price": "$40/hr",
+        "duration": "1 hour",
+        "favorite": true
+    },
+    {
+        "id": 12,
+        "title": "Vocal Tuning",
+        "description": "Professional pitch correction and vocal tuning.",
+        "price": "$30/hr",
+        "duration": "1 hour",
+        "favorite": false
+    },
+    {
+        "id": 13,
+        "title": "Film Scoring",
+        "description": "Compose and record music for films or videos.",
+        "price": "$150/project",
+        "duration": "Per project",
+        "favorite": true
+    },
+    {
+        "id": 14,
+        "title": "Audio Branding",
+        "description": "Create signature sounds or themes for brands.",
+        "price": "$120/project",
+        "duration": "Per project",
+        "favorite": false
+    },
+    {
+        "id": 15,
+        "title": "Sound Design",
+        "description": "Design sound effects for games, films, and apps.",
+        "price": "$90/project",
+        "duration": "Per project",
+        "favorite": true
+    }
+]

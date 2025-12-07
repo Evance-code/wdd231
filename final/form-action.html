@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio One | Booking Confirmation</title>
+    <meta name="description" content="View your booking submission at Studio One." />
+    <meta name="author" content="Evance Hosea Katanga" />
+    <link rel="icon" type="image/x-icon" href="images/studio one.png">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">Studio One</h1>
+            <button class="hamburger" id="hamburger">☰</button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="form.html" class="active">Book Session</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="confirmation">
+            <h2>Booking Submitted!</h2>
+            <p>Thank you for your submission. Here are the details you provided:</p>
+            <ul id="submitted-data">
+                <!-- JS will populate the submitted data here -->
+            </ul>
+            <a href="form.html" class="btn-primary">Book Another Session</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Studio One | All Rights Reserved</p>
+        <a href="attributions.html">Attributions</a> |
+        <a href="#" id="video-link">Project Demo Video</a>
+    </footer>
+
+    <script type="module" src="js/storage.js" defer></script>
+</body>
+
+</html>

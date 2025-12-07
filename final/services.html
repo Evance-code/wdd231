@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Studio One | Services</title>
+    <meta name="description"
+        content="Studio One services: recording, mixing, mastering, production packages and add-ons." />
+    <meta name="author" content="Evance Hosea Katanga" />
+    <link rel="icon" type="image/x-icon" href="images/studio one.png">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/x-icon" href="images/studio one.png">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/styles.css" />
+    <script type="module" src="js/services.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">Studio One</h1>
+            <button class="hamburger" id="hamburger">☰</button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="form.html">Book Session</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="services-hero">
+            <h2>Our Services</h2>
+            <p>Choose from our full list of professional studio packages and add-ons.</p>
+        </section>
+
+        <section class="services-list">
+            <div class="controls">
+                <input type="search" id="search" placeholder="Search services..." aria-label="Search services" />
+                <label class="fav-toggle"><input type="checkbox" id="show-favs" /> Show favorites</label>
+            </div>
+
+            <div id="services-grid" class="grid">
+                <!-- Service cards will be injected here by js (15 items from services.json) -->
+            </div>
+        </section>
+
+        <!-- Accessible Modal -->
+        <div id="service-modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true"
+            aria-labelledby="modal-title">
+            <div class="modal-content">
+                <button class="modal-close" id="modal-close" aria-label="Close modal">✕</button>
+                <h3 id="modal-title">Service Title</h3>
+                <p id="modal-body">Service details will appear here.</p>
+                <ul id="modal-list"></ul>
+                <button id="modal-book" class="btn-primary">Book This Service</button>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Studio One | All Rights Reserved</p>
+        <a href="attributions.html">Attributions</a> |
+        <a href="#" id="video-link">Project Demo Video</a>
+    </footer>
+</body>
+
+</html>
