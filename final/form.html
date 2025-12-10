@@ -10,22 +10,28 @@
     <link rel="icon" type="image/x-icon" href="images/studio one.png">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="css/styles.css" />
+    <script type="module" src="js/main.js" defer></script>
+    <script type="module" src="js/storage.js" defer></script>
 </head>
 
 <body>
+
+    <!-- Header -->
     <header>
         <nav class="navbar">
             <h1 class="logo">Studio One</h1>
-            <button class="hamburger" id="hamburger">☰</button>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">☰</button>
             <ul class="nav-links" id="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="form.html" class="active">Book Session</a></li>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="form.html" class="nav-link active">Book Session</a></li>
+                <li><a href="attributions.html" class="nav-link">Attributions</a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- Main -->
     <main>
         <section class="form-section">
             <h2>Book Your Session</h2>
@@ -58,13 +64,13 @@
         </section>
     </main>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2025 Studio One | All Rights Reserved</p>
         <a href="attributions.html">Attributions</a> |
         <a href="#" id="video-link">Project Demo Video</a>
     </footer>
 
-    <script type="module" src="js/main.js" defer></script>
 </body>
 
 </html>

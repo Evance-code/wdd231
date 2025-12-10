@@ -13,35 +13,42 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/studio one.png">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-    <!-- Optional PNG version for modern browsers -->
+    <!-- Styles -->
     <link rel="stylesheet" href="css/styles.css" />
+    <!-- Scripts -->
     <script type="module" src="js/main.js" defer></script>
 </head>
 
 <body>
+
+    <!-- Header -->
     <header>
         <nav class="navbar">
             <h1 class="logo">Studio One</h1>
-            <button class="hamburger" id="hamburger">☰</button>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">☰</button>
             <ul class="nav-links" id="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="form.html">Book Session</a></li>
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="form.html" class="nav-link">Book Session</a></li>
+                <li><a href="attributions.html" class="nav-link">Attributions</a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- Main -->
     <main>
+        <!-- Hero Section -->
         <section class="hero">
             <h2>Where Your Sound Comes Alive</h2>
             <p>Professional Recording • Mixing • Mastering • Music Production</p>
             <a href="form.html" class="btn-primary">Book a Session</a>
         </section>
 
+        <!-- Features Section -->
         <section class="features">
             <h3>Our Specialties</h3>
-            <div class="feature-grid">
+            <div class="grid feature-grid">
                 <div class="feature-card">
                     <h4>Professional Recording</h4>
                     <p>High-quality microphones, acoustically treated room, and a skilled engineer.</p>
@@ -58,11 +65,13 @@
         </section>
     </main>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2025 Studio One | All Rights Reserved</p>
         <a href="attributions.html">Attributions</a> |
         <a href="#" id="video-link">Project Demo Video</a>
     </footer>
+
 </body>
 
 </html>
